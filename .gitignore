@@ -1,3 +1,9 @@
+# history plugin for vscode
+*.history
+# env variables
+*.env
+*.next
+__generated__/
 # Logs
 logs
 *.log
