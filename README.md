@@ -32,7 +32,7 @@ It uses an old school approach with modern technology to create a really simple 
 ## Why don't I need context like all the other examples?
 we use CSS variables there is no need rerender the app which eliminates the need for a global context.  Also, the only component that needs state is the toggle component so that is the only place that has state.  Using this approach eliminates unnecessary rerenders and removes a lot of complexity. 
 ## How to use
-download /clone and run npm i in the example/* file you wanting to run.
+Download /clone package and then:
 - navigate to example you want to use (/examples/*)
 - run npm i or yarn
 - run npm run * or yarn run * (* can either be dev or start depending on library default)
