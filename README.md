@@ -31,3 +31,15 @@ I might make it one but for now, it's only around 30 lines of code total and the
 It uses an old school approach with modern technology to create a really simple solution.  It toggles a class on the root element of the app where we define our color CSS variables.
 ## Why don't I need context like all the other examples?
 we use CSS variables there is no need rerender the app which eliminates the need for a global context.  Also, the only component that needs state is the toggle component so that is the only place that has state.  Using this approach eliminates unnecessary rerenders and removes a lot of complexity. 
+## How to use
+download /clone and run npm i in the example/* file you wanting to run.
+- navigate to example you want to use (/examples/*)
+- run npm i or yarn
+- run npm run * or yarn run * (* can either be dev or start depending on library default)
+
+example
+- navigate to examples/nextjs
+- run npm i
+- run npm run dev
+
+for example
