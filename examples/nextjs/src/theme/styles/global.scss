@@ -1,0 +1,85 @@
+@charset "utf-8";
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+}
+:root {
+  --border-radius: 8px;
+  --box-shadow: 0 0rem 5px -3px #202122;
+  --font-family: Segoe UI Historic, Segoe UI, Helvetica, Arial, sans-serif;
+  --font-color: #333;
+  --header-height: 4rem;
+  --primary-bg-color: #f3f3f3;
+  --secondary-bg-color: #eee;
+}
+:root.__dark {
+  --box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.3);
+  --font-color: #f5f5f5;
+  --primary-bg-color: #35363a;
+  --secondary-bg-color: #292a2b;
+}
+html,
+body,
+#__next {
+  height: auto;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+html {
+  direction: ltr;
+  font-family: var(--font-family);
+  font-size: 16px;
+  font-weight: lighter;
+  min-width: 320px;
+  scroll-behavior: smooth;
+}
+body {
+  background-color: var(--primary-bg-color);
+  color: var(--font-color);
+  display: inline-block;
+}
+//example styles
+header {
+  align-items: center;
+  background-color: var(--secondary-bg-color);
+  box-shadow: var(--box-shadow);
+  display: flex;
+  height: var(--header-height);
+  justify-content: center;
+  width: 100%;
+}
+main {
+  display: grid;
+  grid-gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
+  padding: 1.5rem;
+}
+button {
+  background-color: transparent;
+  border: none;
+  color: var(--font-color);
+  cursor: pointer;
+  height: 50px;
+  margin: 0 auto;
+  width: 200px;
+  &:focus {
+    //dont do this in production
+    outline: none;
+  }
+}
+.div {
+  align-items: center;
+  background-color: var(--secondary-bg-color);
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  display: flex;
+  justify-content: center;
+  height: 100px;
+}
+.div .title {
+  font-size: 1rem;
+}

@@ -3,12 +3,12 @@ import React from 'react';
 // Id is omitted to make it required for the input.
 // if input is inside of the label it needs an ID
 // or it cannot be selected so we mark it as required.
-type CheckboxInputProps = {
+type CheckboxProps = {
   checked?: boolean
   id: string
 } & Omit<React.HTMLProps<HTMLInputElement>, 'id'>;
 
-const CheckboxInput = ({ checked, id, ...rest }: CheckboxInputProps): JSX.Element => (
+const Checkbox = ({ checked, id, ...rest }: CheckboxProps): JSX.Element => (
   <label htmlFor={id}>
     <input
       checked={checked}
@@ -19,4 +19,4 @@ const CheckboxInput = ({ checked, id, ...rest }: CheckboxInputProps): JSX.Elemen
   </label>
 );
 
-export default CheckboxInput;
+export default Checkbox;

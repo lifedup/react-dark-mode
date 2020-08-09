@@ -1,0 +1,36 @@
+{
+  "name": "next",
+  "version": "0.0.1",
+  "description": "Nextjs, scss, scss modules, typescript, AirBNB style guide, prettier, eslint",
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint --ext .js,.jsx,.ts,.tsx ./"
+  },
+  "dependencies": {
+    "next": "latest",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
+  },
+  "author": "lifedup",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^14.0.5",
+    "@types/react": "^16.9.35",
+    "@types/react-dom": "^16.9.8",
+    "@types/styled-components": "^5.1.2",
+    "@typescript-eslint/eslint-plugin": "^3.2.0",
+    "babel-plugin-styled-components": "^1.11.1",
+    "eslint": "^7.2.0",
+    "eslint-config-airbnb-typescript": "^8.0.2",
+    "eslint-plugin-import": "^2.21.2",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-react": "^7.20.0",
+    "eslint-plugin-react-hooks": "^4.0.4",
+    "prettier": "2.0.5",
+    "sass": "^1.26.7",
+    "styled-components": "^5.1.1",
+    "typescript": "^3.9.5"
+  }
+}
