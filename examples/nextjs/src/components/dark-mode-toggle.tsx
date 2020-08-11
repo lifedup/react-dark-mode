@@ -2,14 +2,8 @@ import React from 'react';
 import useBroadcast from 'lib/use-broadcast';
 
 const DarkModeSwitch = (): JSX.Element => {
-    const [isDark, setDark] = useBroadcast('dark-mode', '0');
-
-    React.useEffect(() => {
-        const lsDark = window.localStorage.getItem('dark-mode');
-        const browserIsDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-        const initialState = (browserIsDark && lsDark === null) || lsDark === '1';
-        setDark(initialState);
-    }, []);
+    const initialState = document.documentElement.classList.contains('__dark');
+    const [isDark, setDark] = useBroadcast('dark-mode', initialState);
 
     const toggle = () => {
         setDark(!isDark);

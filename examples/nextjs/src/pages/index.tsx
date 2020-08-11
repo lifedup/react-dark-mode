@@ -6,7 +6,6 @@ import CSSModuleComponent from 'components/css-module-component';
 const Index = (): JSX.Element => (
     <>
         <header>
-
             <DarkModeToggle />
         </header>
         <main>
