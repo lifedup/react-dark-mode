@@ -3,6 +3,8 @@ import Document, { Head, Main, NextScript, DocumentContext } from 'next/document
 import { ServerStyleSheet } from 'styled-components';
 
 export default class MyDocument extends Document {
+  // if you don't used styled compoenets you can remove the whole 
+  // get initialPropsFunction
   static async getInitialProps(ctx: DocumentContext) {
     const sheet = new ServerStyleSheet();
     const originalRenderPage = ctx.renderPage;

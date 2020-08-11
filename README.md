@@ -2,7 +2,7 @@
 # React Dark mode
 Ultra light weight example that is not complicated or over engineered. It's less than 30 lines of code with a lot of lessons to be learned in each line.  This is why it's currently not just a package. 
 ## Why is this not a package
-I might make it one but for now, it's only around 30 lines of code total and there are a lot of lessons to be learned in each line.  The solution uses 3 different browser technologies and a few different react methodologies like keep state where it's used, don't rerender if you don't have to, and don't use global state if you don't need to.
+I might make it one but for now, it's only around 60 lines of readable code total and there are a lot of lessons to be learned in each line.  The solution uses 3 different browser technologies and a few different react methodologies like keep state where it's used, don't rerender if you don't have to, and don't use global state if you don't need to.  The way the tech works together is the same way you would sync login/out state, shopping cart data, and any other stat that needs to be updated across browser tabs and windows.
 ## What is does not do
 - Does not use global state or context
 - Does not rerender app on theme state change
@@ -31,3 +31,15 @@ I might make it one but for now, it's only around 30 lines of code total and the
 It uses an old school approach with modern technology to create a really simple solution.  It toggles a class on the root element of the app where we define our color CSS variables.
 ## Why don't I need context like all the other examples?
 we use CSS variables there is no need rerender the app which eliminates the need for a global context.  Also, the only component that needs state is the toggle component so that is the only place that has state.  Using this approach eliminates unnecessary rerenders and removes a lot of complexity. 
+## How to use
+Download /clone package and then:
+- navigate to example you want to use (/examples/*)
+- run npm i or yarn
+- run npm run * or yarn run * (* can either be dev or start depending on library default)
+
+example
+- navigate to examples/nextjs
+- run npm i
+- run npm run dev
+
+for example
