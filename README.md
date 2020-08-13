@@ -1,6 +1,6 @@
 
 # React Dark mode
-Ultra light weight cross browser example that is not complicated or over engineered and works in more scenarios than all other examples.
+Ultra light weight cross browser typescript example that is not complicated or over engineered and works in more scenarios than all other examples.
 ## Why is this not a package
 I might make it one but for now, it's only around 60 lines of readable code total and there are a lot of lessons to be learned in each line.  The solution uses 3 different browser technologies and a few different react methodologies like keep state where it's used, don't rerender if you don't have to, and don't use global state if you don't need to.  The way the tech works together is the same way you would sync login/out state, shopping cart data, and any other stat that needs to be updated across browser tabs and windows.
 ## What is does not do
