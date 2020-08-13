@@ -1,6 +1,8 @@
 {
     "compilerOptions": { "strict": true },
     "include": [
+      "**/public/*.js",
+      "**/public/**/*.js",
       "**/src/**/*.ts",
       "**/src/**/*.tsx",
       "next-env.d.ts"
