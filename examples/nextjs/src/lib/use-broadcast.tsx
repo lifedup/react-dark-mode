@@ -14,17 +14,19 @@ const useBroadcast: UseBroadcast = (name, initialState) => {
   };
 
   React.useEffect(() => {
-    channel.current = new BroadcastChannel(name);
-    channel.current.onmessage = (event) => {
-      const value = event.data as unknown;
-      setLocalState(value);
-    };
+    if (typeof BroadcastChannel !== 'undefined') {
+      channel.current = new BroadcastChannel(name);
+      channel.current.onmessage = (event) => {
+        const value = event.data as unknown;
+        setLocalState(value);
+      };
+    }
     return () => {
       if (channel.current) {
         channel.current.close();
       }
-    }
-  }, []);
+    };
+  }, [name]);
 
   return [state, setState];
 };

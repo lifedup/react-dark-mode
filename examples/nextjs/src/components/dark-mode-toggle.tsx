@@ -1,18 +1,30 @@
 import React from 'react';
-import useBroadcast from 'lib/use-broadcast';
+import useDarkMode from 'lib/use-dark-mode';
+
+const Dark = (): JSX.Element => (
+  <>
+    <span role="img" aria-label="crescent moon">🌙</span>
+    {' '}
+    Switch to Light Mode
+  </>
+);
+
+const Light = (): JSX.Element => (
+  <>
+    <span role="img" aria-label="smiling sun">🌞</span>
+    {' '}
+    Switch to Dark Mode
+  </>
+);
 
 const DarkModeSwitch = (): JSX.Element => {
-    const initialState = document.documentElement.classList.contains('__dark');
-    const [isDark, setDark] = useBroadcast('dark-mode', initialState);
+  const [isDark, toggle] = useDarkMode();
 
-    const toggle = () => {
-        setDark(!isDark);
-        window.localStorage.setItem('dark-mode', !isDark ? '1' : '0');
-    };
-
-    return <button type="button" onClick={toggle}>
-        {isDark ? "🌞 Switch to Light Mode" : "🌙 Switch to Dark Mode"}
+  return (
+    <button type="button" onClick={toggle}>
+      {isDark ? <Dark /> : <Light />}
     </button>
+  );
 };
 
 export default React.memo(DarkModeSwitch);

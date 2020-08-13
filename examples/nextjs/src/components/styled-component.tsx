@@ -1,6 +1,5 @@
 import React from 'react';
-import styled from "styled-components";
-
+import styled from 'styled-components';
 
 const Div = styled.div`
     align-items: center;
@@ -9,17 +8,18 @@ const Div = styled.div`
     box-shadow: var(--box-shadow);
     display: flex;
     justify-content: center;
-    height: 100px;
+    padding: 1rem;
 `;
 
 const H1 = styled.h1`
     font-size: 1rem;
+    font-weight: normal;
 `;
 
 const StyledComponent = (): JSX.Element => (
-    <Div>
-        <H1>This is styled using a styled component</H1>
-    </Div>
-)
+  <Div>
+    <H1>This is styled using a styled component</H1>
+  </Div>
+);
 
 export default StyledComponent;
