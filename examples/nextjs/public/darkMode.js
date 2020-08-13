@@ -1,4 +1,4 @@
-const lsDark = window.localStorage.getItem('dark-mode') === '1';
+const lsDark = window.localStorage.getItem('dark-mode');
 const browserIsDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
 const initialState = (browserIsDark && lsDark === null) || lsDark;
 
